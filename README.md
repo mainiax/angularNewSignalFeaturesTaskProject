@@ -116,7 +116,7 @@ effect(() => {
 });
 ```
 
-> Highlight your favorite snippets around `signal`, `computed`, and `effect`.
+> favorite snippets around `signal`, `computed`, and `effect`.
 
 ---
 
