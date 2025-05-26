@@ -1,0 +1,23 @@
+<app-card>
+  <section id="tasks">
+    <header>
+      <h2>{{ name() }}'s task</h2>
+      <menu>
+        <button (click)="onShowForm()">Add Task</button>
+      </menu>
+    </header>
+
+    <ul>
+      @for(item of selectedTask(); track item.id){
+      <li>
+        <app-task [task]="item" />
+      </li>
+      } @if(showForm()){
+      <app-task-form
+        (taskCancel)="onShowForm()"
+        (formData)="onFormSubmit($event)"
+      />
+      }
+    </ul>
+  </section>
+</app-card>
